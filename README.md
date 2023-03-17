@@ -98,7 +98,7 @@ Once the command finishes, you should see the whole NAND backup in the ```backup
 
 You should have the whole NAND backup in the ```backup``` folder before proceeding.
 
-To do so, first put calculator into [SDP mode](#21-entering-the-sdp-mode).
+To do so, first put calculator into [SDP mode](#21-entering-sdp-mode).
 
 ### Windows
 ```cmd
@@ -120,7 +120,7 @@ sudo ./uuu restore_nand.uu
 
 **NOTE**: When running in RAM, try not to exceed a filesystem size of ~15 MB, otherwise you'll (most likely) have to re-compile U-Boot.
 
-To begin, first put your calculator into [SDP mode](#21-entering-the-sdp-mode).
+To begin, first put your calculator into [SDP mode](#21-entering-sdp-mode).
 
 ### Windows
 ```cmd
@@ -141,7 +141,7 @@ The calculator should now boot into Linux. Login with the username `root` (no pa
 
 **WARNING**: Make sure you have a full NAND backup before proceeding.
 
-To do so, first put calculator into [SDP mode](#21-entering-the-sdp-mode).
+To do so, first put calculator into [SDP mode](#21-entering-sdp-mode).
 
 ### Windows
 ```
