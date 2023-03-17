@@ -4,7 +4,7 @@ uuu_version 1.2.135
 
 SDP: boot -f boot/u-boot-dtb.imx -nojump
 SDP: write -f firmware/zImage -addr 0x80800000
-SDP: write -f firmware/imx6ull-14x14-prime.dtb -addr 0x83000000
-SDP: write -f firmware/rootfs.cpio.uboot -addr 0x86800000
+SDP: write -f firmware/imx6ull-14x14-prime.dtb -addr 0x82500000
+SDP: write -f firmware/rootfs.cpio.uboot -addr 0x85D00000
 SDP: jump -f boot/u-boot-dtb.imx -ivt
 SDP: done

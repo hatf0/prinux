@@ -13,7 +13,7 @@ SDP: jump -f boot/u-boot-dtb.imx -ivt
 FBK: ucmd mount -t debugfs debugfs /sys/kernel/debug
 FBK: ucmd flash_erase /dev/mtd0 0 0
 FBK: ucp firmware/u-boot-dtb.imx t:/tmp
-FBK: ucmd kobs-ng init -x -v --chip_0_device_path=/dev/mtd0 /tmp/u-boot-dtb.imx
+FBK: ucmd cd /tmp && kobs-ng init -x -v --chip_0_device_path=/dev/mtd0 /tmp/u-boot-dtb.imx
 
 # Flash kernel
 FBK: ucmd flash_erase /dev/mtd1 0 0

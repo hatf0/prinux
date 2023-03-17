@@ -1,0 +1,7 @@
+uuu_version 1.2.135
+
+# Enter fastboot, allowing you to send U-Boot commands.
+
+SDP: boot -f boot/u-boot-dtb-fastboot.imx -nojump
+SDP: jump -f boot/u-boot-dtb-fastboot.imx -ivt
+SDP: done

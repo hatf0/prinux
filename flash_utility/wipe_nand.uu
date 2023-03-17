@@ -1,0 +1,12 @@
+uuu_version 1.2.135
+
+# Boot into manufacturing environment
+SDP: boot -f boot/u-boot-dtb-nomtdpart.imx -nojump
+SDP: write -f boot/zImage -addr 0x80800000
+SDP: write -f boot/imx6ull-14x14-prime.dtb -addr 0x83000000
+SDP: write -f boot/fsl-image-mfgtool-initramfs-imx_mfgtools.cpio.gz.u-boot -addr 0x86800000
+SDP: jump -f boot/u-boot-dtb-nomtdpart.imx -ivt
+
+# Wipe NAND
+FBK: ucmd mount -t debugfs debugfs /sys/kernel/debug
+FBK: ucmd flash_erase /dev/mtd0 0 0

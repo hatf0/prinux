@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_PRINUX_PATH/package/mesa3d/Config.in"

@@ -1,0 +1,16 @@
+uuu_version 1.2.135
+
+# This script allows you to enter a "recovery mode" of sorts, allowing you to run commands via the uuu shell.
+
+# Boot into flash environment
+SDP: boot -f boot/u-boot-dtb.imx -nojump
+SDP: write -f boot/zImage -addr 0x80800000
+SDP: write -f boot/imx6ull-14x14-prime.dtb -addr 0x83000000
+SDP: write -f boot/fsl-image-mfgtool-initramfs-imx_mfgtools.cpio.gz.u-boot -addr 0x86800000
+SDP: jump -f boot/u-boot-dtb.imx -ivt
+
+# Mount the debugfs (just in case)
+FBK: ucmd mount -t debugfs debugfs /sys/kernel/debug
+FBK: done
+
+# After this script is done executing, run ./uuu -s. From there, you'll be able to run Linux commands by prefixing them with 'FBK: ucmd (command you want to run)'.

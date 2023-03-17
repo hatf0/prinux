@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case "$1" in
+	start)
+		printf "Loading serial driver..."
+		modprobe g_serial
+		;;
+	*)
+		exit 1
+		;;
+esac

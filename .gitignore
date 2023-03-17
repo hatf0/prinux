@@ -1,0 +1,7 @@
+*.dtb
+*.uboot
+*.u-boot
+*.bz2
+*.imx
+zImage
+flash_utility/backup
